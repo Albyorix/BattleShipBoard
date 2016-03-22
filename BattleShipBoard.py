@@ -49,8 +49,8 @@ class Boat:
 
     def __repr__(self):
         output_string = '(' + str(self.position_x)
-        output_string += str(', ') + str(self.position_y)
-        output_string += str(', ') + self.direction + ')'
+        output_string += ', ' + str(self.position_y)
+        output_string += ', ' + self.direction + ')'
         if self.is_wreck:
             output_string += ' SUNK'
         output_string += '\n'
@@ -182,9 +182,9 @@ if __name__ == "__main__":
 
     # 5 Tests that should fail:
     for i in range(1, 6):
-        test_path = 'Tests/Error_tests/test_6.txt'
-        my_battleship_board = BattleShipBoard(test_path)
+        test_path = 'Tests/Error_tests/test_' + str(i) + '.txt'
         try:
+            my_battleship_board = BattleShipBoard(test_path)
             my_battleship_board.run()
         except:
             print "The fail test %i was cleared" % i

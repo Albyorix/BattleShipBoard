@@ -1,4 +1,4 @@
-
+Python Version of the BattleShip code interview exercise
 
 I create a class Boat that contains the information about each boat:
 - id: to be able to find it it a list

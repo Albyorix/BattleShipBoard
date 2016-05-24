@@ -93,8 +93,7 @@ class BattleShipBoard:
         for i in range(len(self.new_boats)):
             self.new_boats[i] = self.new_boats[i].split(',')
         # Replace : "(0, 0) RR\n(0, 0)\n(1, 1) M"
-        # with : [[['0','0'],'RR'],[[0,0],''],[['1','1'],'M']]
-
+        # with : [[['0','0'],'RR'],[['0','0'],''],[['1','1'],'M']]
         tmp_actions = self.raw_actions.replace('(', '')
         tmp_actions = tmp_actions.replace(' ', '')
         self.actions = tmp_actions.split('\n')
